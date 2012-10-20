@@ -21,3 +21,7 @@ Turbolinks behaviour for forms.
 
 4. Add `remote: true` attribute to make your form turbo powered.
 5. Restart your server and you're now using turboforms!
+
+### With Devise
+
+Make sure you have disabled `config.http_authenticatable_on_xhr`
