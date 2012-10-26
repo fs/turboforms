@@ -8,7 +8,7 @@ Turbolinks behaviour for forms.
 
   ```ruby
   gem 'turbolinks', git: 'git://github.com/fs/turbolinks.git'
-  gem 'turboforms', git: 'git://github.com/fs/turboform.git'
+  gem 'turboforms', git: 'git://github.com/fs/turboforms.git'
   ```
 
 2. Run `bundle install`.
