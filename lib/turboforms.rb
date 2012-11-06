@@ -11,7 +11,7 @@ module Turboforms
 
       if options.has_key?(:turboform) && options.delete(:turboform)
         options[:html] ||= {}
-        options[:html][:turboform] = true
+        options[:html]["data-turboform"] = true
         options[:remote] = true
       end
 
