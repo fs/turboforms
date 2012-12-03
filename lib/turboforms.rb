@@ -27,8 +27,8 @@ module Turboforms
       options = args.extract_options!
 
       if options.has_key?(:turboform) && options.delete(:turboform)
-        options[:html] ||= {}
-        options[:html]["data-turboform"] = true
+        options[:data] ||= {}
+        options[:data]["turboform"] = true
         options[:remote] = true
       end
 
