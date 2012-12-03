@@ -21,7 +21,8 @@ $.fn.extend
         TL.resetScrollPosition()
         TL.triggerEvent 'page:load'
 
-$('form[data-turboform]').turboForms()
+$ ->
+  $('form[data-turboform]').turboForms()
 
 $(document).on 'page:load', ->
   $('form[data-turboform]').turboForms()
