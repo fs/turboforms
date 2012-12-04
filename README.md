@@ -19,7 +19,7 @@ Turbolinks behaviour for forms.
   //= require jquery.turboforms
   ```
 
-4. Add `remote: true` attribute to make your form turbo powered.
+4. Add `turboform: true` attribute to make your form turbo powered.
 5. Restart your server and you're now using turboforms!
 
 ### With Devise
