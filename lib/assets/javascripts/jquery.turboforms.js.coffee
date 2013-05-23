@@ -66,13 +66,19 @@ $.fn.extend
         triggerEvent 'page:fetch'
 
       el.bind 'ajax:complete', (event, xhr, status) ->
+      # create new document
         doc = createDocument xhr.responseText
-        console.log doc.querySelector('title')?.textContent
-        console.log doc.body
-        console.log CSRFToken.get(doc).token
+      # setup title and body
         document.title = doc.querySelector('title')?.textContent
         document.documentElement.replaceChild doc.body, document.body
+      # reset scrolls
+        window.scrollTo 0, 0
+      # remove noscript tags
+        noscriptTags = Array::slice.call document.body.getElementsByTagName 'noscript'
+        noscript.parentNode.removeChild noscript for noscript in noscriptTags
+      # setup csrf token
         CSRFToken.update CSRFToken.get(doc).token
+      # execute sscripts
         executeScriptTags()
         triggerEvent 'page:load'
 
